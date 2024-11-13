@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <!-- EditText for Writing Post -->
+    <EditText
+        android:id="@+id/addPostEditText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:hint="Write your post here..."
+        android:background="@drawable/rounded_edittext_background"
+        android:padding="8dp"
+        android:paddingTop="16dp"
+        android:gravity="top"
+        android:textColorHint="#A57A67"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/addPostImagePreview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+    <!-- ImageView for displaying selected image or video -->
+    <ImageView
+        android:id="@+id/addPostImagePreview"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/rounded_edittext_background"
+        app:layout_constraintTop_toBottomOf="@+id/addPostEditText"
+        app:layout_constraintBottom_toTopOf="@+id/addPostSelectImageButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+    <!-- Button to select image or video -->
+    <Button
+        android:id="@+id/addPostSelectImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Image/Video"
+        android:backgroundTint="#A57A67"
+        app:layout_constraintTop_toBottomOf="@+id/addPostImagePreview"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/addPostButton"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+    <!-- Button to post -->
+    <Button
+        android:id="@+id/addPostButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Post"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#A57A67"
+        app:layout_constraintTop_toBottomOf="@+id/addPostSelectImageButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

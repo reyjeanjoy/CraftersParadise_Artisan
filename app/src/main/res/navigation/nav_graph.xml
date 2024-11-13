@@ -1,0 +1,24 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/ArtisanHomeFragment">
+
+    <fragment
+        android:id="@+id/ArtisanHomeFragment"
+        android:name="com.craftersparadise.artisans.ArtisanHomeFragment"
+        android:label="Artisan Home"
+        tools:layout="@layout/fragment_artisan_home">
+        <action
+            android:id="@+id/action_home_to_search"
+            app:destination="@id/ArtisanSearchFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ArtisanSearchFragment"
+        android:name="com.craftersparadise.artisans.ArtisanSearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_artisan_search" />
+
+
+</navigation>

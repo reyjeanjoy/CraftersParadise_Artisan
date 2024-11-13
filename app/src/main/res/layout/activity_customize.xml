@@ -1,0 +1,196 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/customCanvas"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:padding="8dp"
+        android:layout_marginTop="10dp"
+        android:contentDescription="Back" />
+
+    <ImageButton
+        android:id="@+id/drawButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_draw"
+        android:background="@drawable/circle_background"
+        android:contentDescription="Draw"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_margin="16dp"/>
+
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/drawButton"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="10dp">
+
+        <ImageButton
+            android:id="@+id/textButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_text"
+            android:background="@drawable/circle_background"
+            android:contentDescription="Add Text" />
+
+        <ImageButton
+            android:id="@+id/eraseButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_erase"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/circle_background"
+            android:contentDescription="Erase" />
+
+        <ImageButton
+            android:id="@+id/addImageButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_addimage"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/circle_background"
+            android:contentDescription="Add Image" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/heightMeasurementContainer"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="#A57A67"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="20dp">
+
+        <EditText
+            android:id="@+id/heightEditText"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:hint="Height (cm)"
+            android:textSize="13sp"
+            android:inputType="number"
+            android:maxLength="3"
+            android:textAlignment="center"
+            android:padding="2dp"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginStart="4dp">
+
+            <ImageButton
+                android:id="@+id/increaseHeightButton"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_up"
+                android:contentDescription="Increase Height"
+                android:background="?attr/selectableItemBackgroundBorderless"/>
+
+            <ImageButton
+                android:id="@+id/decreaseHeightButton"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_down"
+                android:contentDescription="Decrease Height"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/widthMeasurementContainer"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="#A57A67"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/heightMeasurementContainer"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="8dp">
+
+        <EditText
+            android:id="@+id/widthEditText"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:hint="Width (cm)"
+            android:textSize="13sp"
+            android:inputType="number"
+            android:maxLength="3"
+            android:textAlignment="center"
+            android:padding="2dp"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginStart="4dp">
+
+            <ImageButton
+                android:id="@+id/increaseWidthButton"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_up"
+                android:contentDescription="Increase Width"
+                android:background="?attr/selectableItemBackgroundBorderless"/>
+
+            <ImageButton
+                android:id="@+id/decreaseWidthButton"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_down"
+                android:contentDescription="Decrease Width"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/sendCustomizeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_send"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Send Customize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="20dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

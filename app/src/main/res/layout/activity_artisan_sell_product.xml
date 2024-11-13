@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Circular Image Header -->
+            <ImageView
+                android:id="@+id/headerImage"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/sample_image1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/circle_background"/>
+
+            <TextView
+                android:id="@+id/sell_shopName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                app:layout_constraintTop_toBottomOf="@id/headerImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/sell_shopLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/sell_shopName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="4dp"
+                android:textColor="@android:color/black"/>
+
+            <EditText
+                android:id="@+id/send_productname"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="Name of Product"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/sell_shopLocation"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:padding="12dp"
+                android:background="@drawable/rounded_edittext_background"/>
+
+            <!-- Price EditText -->
+            <EditText
+                android:id="@+id/send_productprice"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="Price"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/send_productname"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:padding="12dp"
+                android:background="@drawable/rounded_edittext_background"/>
+
+            <!-- Description EditText -->
+            <EditText
+                android:id="@+id/send_productdesc"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="Description"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/send_productprice"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:padding="12dp"
+                android:background="@drawable/rounded_edittext_background"/>
+
+            <!-- Width, Height EditText -->
+            <EditText
+                android:id="@+id/send_productwidth"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="Width"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/send_productdesc"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:padding="12dp"
+                android:background="@drawable/rounded_edittext_background"/>
+
+            <EditText
+                android:id="@+id/send_productheight"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="Height"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/send_productwidth"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:padding="12dp"
+                android:background="@drawable/rounded_edittext_background"/>
+
+            <!-- Weight Capacity EditText -->
+            <EditText
+                android:id="@+id/send_productweightcapacity"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="Weight Capacity"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/send_productheight"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:padding="12dp"
+                android:background="@drawable/rounded_edittext_background"/>
+
+            <!-- Material and Care EditText -->
+            <EditText
+                android:id="@+id/send_productmaterial"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="Material"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/send_productweightcapacity"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:padding="12dp"
+                android:background="@drawable/rounded_edittext_background"/>
+
+            <EditText
+                android:id="@+id/send_productcare"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="Care and Maintenance"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@id/send_productmaterial"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"
+                android:padding="12dp"
+                android:background="@drawable/rounded_edittext_background"/>
+
+            <!-- Add Image Button -->
+            <Button
+                android:id="@+id/sendbtn_addimage"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Add Image"
+                android:backgroundTint="#A57A67"
+                app:layout_constraintTop_toBottomOf="@id/send_productcare"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <!-- Selected Image View -->
+            <ImageView
+                android:id="@+id/sell_selectedImage"
+                android:layout_width="300dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintTop_toBottomOf="@id/sendbtn_addimage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:visibility="gone"/>
+
+            <!-- Save Button -->
+            <Button
+                android:id="@+id/sendbtn_save"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Save"
+                app:layout_constraintTop_toBottomOf="@id/sell_selectedImage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="32dp"
+                android:backgroundTint="#A57A67"
+                android:drawableStart="@drawable/status_icon"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
